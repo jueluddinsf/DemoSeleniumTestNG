@@ -12,10 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 
-public class WellsFargo {
+public class WellsFargo extends DriverUtility {
 	WebDriver browser;
 	String base_url = "https://www.wellsfargo.com/mortgage/rates/calculator/";
 
+	
 	@Test
 	public void Verify_mortgage_calculator() {
 		browser.get(base_url);
@@ -71,9 +72,7 @@ public class WellsFargo {
 
 	@BeforeTest
 	public void setup() {
-		// this code will run before @test
-		System.setProperty("webdriver.chrome.driver", "/Users/jueluddin/Desktop/chromedriver");
-		browser = new ChromeDriver();
+		browser = getdriver("chrome");
 	}
 
 	@AfterTest

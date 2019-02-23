@@ -7,15 +7,15 @@ import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 
-public class NewTest {
+public class NewTest extends DriverUtility {
 	WebDriver browser;
 
 	@Test
 	public void verify_AbsoluteCare_FIDA_Plan_page_displays() {
 		// click get health insurance link
+		browser.get("https://healthfirst.org/");
 		browser.findElement(By.linkText("Get Health Insurance")).click();
 		browser.findElement(By.xpath("//*[@aria-label='More info about Healthfirst AbsoluteCare FIDA Plan']")).click();
 		String expected_text = "The Healthfirst AbsoluteCare FIDA Plan is for full-benefit Medicare-Medicaid beneficiaries, age 21 or over, who require community-based, long-term care services or who reside in a nursing home.";
@@ -26,6 +26,7 @@ public class NewTest {
 
 	@Test
 	public void verify_that_info_for_member_has_login_link() {
+		browser.get("https://healthfirst.org/");
 		browser.findElement(By.linkText("Info For Members")).click();
 		String expected_text = "Your secure Healthfirst account is now easier to use!";
 		//verify we are in the right page
@@ -37,10 +38,8 @@ public class NewTest {
 
 	@BeforeTest
 	public void setup() {
-		// this code will run before @test
-		System.setProperty("webdriver.chrome.driver", "/Users/jueluddin/Desktop/chromedriver");
-		browser = new ChromeDriver();
-		browser.get("https://healthfirst.org/");
+		browser = getdriver("chrome");
+	
 	}
 
 	@AfterTest
