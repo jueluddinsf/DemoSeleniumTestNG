@@ -1,19 +1,36 @@
 package greendesk.greendeskAutomation;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-public class MercuryTours {
+
+public class MercuryTours extends DriverUtility {
+	WebDriver browser; 
+	 String base_url = "https://mercurytours.com"; 
+	 
+	 
+	 //this is for practice
+	 //automation 
+	 
+	 
   @Test
   public void f() {
   }
+
   @BeforeTest
-  public void beforeTest() {
+  public void CallDriver() {
+	
+	  
   }
 
   @AfterTest
-  public void afterTest() {
+  public void tearDown() {
+		closeBrowser();
   }
+  
 
 }
+
+
