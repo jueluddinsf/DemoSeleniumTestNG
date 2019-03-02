@@ -34,4 +34,13 @@ public class DriverUtility
 		}
 
 	}
+	
+	public void closeBrowser() {
+		browser.close();
+		browser.quit();
+	}
+	
+	
+	
+	
 }

@@ -77,8 +77,7 @@ public class WellsFargo extends DriverUtility {
 
 	@AfterTest
 	public void afterTest() {
-		browser.close();
-		browser.quit();
+		closeBrowser();
 		
 
 	}
