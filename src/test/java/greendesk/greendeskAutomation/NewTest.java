@@ -45,8 +45,7 @@ public class NewTest extends DriverUtility {
 	@AfterTest
 	public void afterTest() {
 		// this code will run after @test
-		browser.close();
-		browser.quit();
+		closeBrowser();
 
 	}
 
