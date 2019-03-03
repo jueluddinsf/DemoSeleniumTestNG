@@ -15,7 +15,8 @@ public class MyTest extends DriverUtility {
   }
 
   @AfterTest
-  public void afterTest() {
+  public void Abort() {
+	  closeBrowser();
   }
 
 }
