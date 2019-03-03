@@ -7,6 +7,7 @@ import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 
 public class MyTest extends DriverUtility {
@@ -21,6 +22,13 @@ public class MyTest extends DriverUtility {
 	  String actual_text_page = browser.findElement(By.className("q-bold2")).getText();
 	  System.out.println("For debugging only : " + actual_text_page );
 	  assertEquals(actual_text_page, expected_text_page);
+	  
+	  //Select dropdown for year of car
+	  
+	  Select year_model_dropdown = new Select(browser.findElement(By.name("salesLead.configuredVehicle.modelyear")));
+	  year_model_dropdown.selectByIndex(1);
+	  
+	  
   }
   @BeforeTest
   public void Callbrowser () {
