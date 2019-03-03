@@ -28,6 +28,20 @@ public class MyTest extends DriverUtility {
 	  Select year_model_dropdown = new Select(browser.findElement(By.name("salesLead.configuredVehicle.modelyear")));
 	  year_model_dropdown.selectByIndex(1);
 	  
+	  // select dropdown for car model
+	  
+	  //Select model_dropdown = new Select (browser.findElement(By.xpath("//*[@id=\"select_vehicle\"]/div/div[2]/div/div[2]/div/div/div/div[1]/div[2]")));
+	  //model_dropdown.selectByValue("camaro");
+
+	  //enter client name on text field
+	  browser.findElement(By.id("gmit-gf-first-name")).sendKeys("mario");
+	  
+	  //enter client last name field
+	  browser.findElement(By.id("gmit-gf-last-name")).sendKeys("montana");
+	  
+	  
+	  
+	  
 	  
   }
   @BeforeTest
@@ -38,8 +52,8 @@ public class MyTest extends DriverUtility {
 
   @AfterTest
   public void Abort() {
-	  closeBrowser();
-	  browser.quit();
+	  //closeBrowser();
+	  //browser.quit();
   }
 
 }
