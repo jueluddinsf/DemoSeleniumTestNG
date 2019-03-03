@@ -10,7 +10,7 @@ public class DriverUtility
 	public WebDriver browser;
 
 	public DriverUtility() {
-		System.setProperty("webdriver.chrome.driver", "/Users/jueluddin/Desktop/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/xavier/Desktop/chromedriver");
 		browser = new ChromeDriver();
 	}
 
