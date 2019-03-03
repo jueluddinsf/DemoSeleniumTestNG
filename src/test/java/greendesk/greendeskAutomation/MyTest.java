@@ -9,7 +9,9 @@ public class MyTest extends DriverUtility {
   public void f() {
   }
   @BeforeTest
-  public void beforeTest() {
+  public void Callbrowser () {
+	  browser = getdriver ("chrome");
+	  
   }
 
   @AfterTest
