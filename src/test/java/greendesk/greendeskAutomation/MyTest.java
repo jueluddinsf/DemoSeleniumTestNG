@@ -62,6 +62,8 @@ public class MyTest extends DriverUtility {
 	 browser.findElement(By.id("gmit-gf-postal-code")).clear();
 	 browser.findElement(By.id("gmit-gf-postal-code")).sendKeys("11360");
 	 
+	 //enter email address for car quote
+	 browser.findElement(By.id("email_address")).sendKeys("mar_"+num +"@gmail.com");
 	 
 	  
 	  
@@ -82,7 +84,7 @@ public class MyTest extends DriverUtility {
 
   @AfterTest
   public void Abort() {
-	  closeBrowser();
+	  //closeBrowser();
 	  //browser.quit();
   }
 
