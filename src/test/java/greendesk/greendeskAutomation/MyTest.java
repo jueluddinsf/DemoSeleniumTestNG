@@ -84,8 +84,8 @@ public class MyTest extends DriverUtility {
 
   @AfterTest
   public void Abort() {
-	  //closeBrowser();
-	  //browser.quit();
+	  closeBrowser();
+	  
   }
 
 }
