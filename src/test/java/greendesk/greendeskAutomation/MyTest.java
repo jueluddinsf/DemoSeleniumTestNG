@@ -28,7 +28,7 @@ public class MyTest extends DriverUtility {
 	  //Select dropdown for year of car
 	  
 	  Select year_model_dropdown = new Select(browser.findElement(By.name("salesLead.configuredVehicle.modelyear")));
-	  year_model_dropdown.selectByIndex(1);
+	  year_model_dropdown.selectByIndex(2);
 	  
 	  // select dropdown for car model
 	  
@@ -84,7 +84,7 @@ public class MyTest extends DriverUtility {
 
   @AfterTest
   public void Abort() {
-	  closeBrowser();
+	  //closeBrowser();
 	  
   }
 
