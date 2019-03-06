@@ -26,7 +26,7 @@ public class ChaseLoanCalculator extends DriverUtility {
 	  
 	  
 	  
-	  // Select purchase from dropdown
+	  // Select purchase from dropd own
 	  Select purchase_type_dropdown = new Select(browser.findElement(By.id("ctl00_CenterContentPlaceHolder_CRQControl_loanTypeList")));
 	  purchase_type_dropdown.selectByVisibleText("Purchase");
 	  
