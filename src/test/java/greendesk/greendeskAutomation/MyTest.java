@@ -14,7 +14,7 @@ import org.testng.annotations.AfterTest;
 
 public class MyTest extends DriverUtility {
 	WebDriver browser;
-	String base_url = "https://www.chevrolet.com/request-quote?x-caller=vco&x-modelyear=2019&x-carline=camaro&x-bodystyle=camaro&offerTitle=2019%20CHEVROLET%20Camaro%20Coupe&offerType=Cash&offerSummary=%20%20%24500%20Customer%20Cash%20%20%20%20";
+	String base_url = "https://www.chevrolet.com/request-quote";
   @Test
   public void Verify_user_can_get_car_quote() {
 	  browser.get(base_url);
@@ -30,11 +30,7 @@ public class MyTest extends DriverUtility {
 	  Select year_model_dropdown = new Select(browser.findElement(By.name("salesLead.configuredVehicle.modelyear")));
 	  year_model_dropdown.selectByIndex(2);
 	  
-	  // select dropdown for car model
-	  
-	  //Select model_dropdown = new Select (browser.findElement(By.xpath("//*[@id=\"select_vehicle\"]/div/div[2]/div/div[2]/div/div/div/div[1]/div[2]")));
-	  //model_dropdown.selectByValue("camaro");
-
+	
 	  //enter client name on text field
 	  browser.findElement(By.id("gmit-gf-first-name")).sendKeys("mario");
 	  
@@ -79,6 +75,7 @@ public class MyTest extends DriverUtility {
   @BeforeTest
   public void Callbrowser () {
 	  browser = getdriver ("chrome");
+	  browser.manage().window().maximize();
 	  
   }
 
